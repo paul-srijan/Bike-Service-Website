@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oli's Hog Garage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Kelly+Slab&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        #navbar{
+            margin-top: -10px;
+            position: fixed;
+            /* width: 100%; */
+            z-index: 1 ;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            position: fixed;
+            background-color: black;
+            font-family: sans-serif;
+            width: 100%;
+        }
+        ul li{
+            margin-left: 50px;
+            margin-right: 50px;
+           
+        }
+        li a{
+            color: white;
+            font-size: 20px;
+            /* padding-top: -150px;
+            margin-top: -150px;
+
+             */
+          
+        }
+
+        li a:hover{
+            color: rgba(255, 80, 30, 1);     
+          
+        }
+        #logo_img{
+            border-radius: 50%;
+            margin-right: -25px;
+        }
+        #nav_text{
+            margin: 0;
+            color: white;
+            /* font-weight: 100; */
+        }
+        #nav_text h2{
+            font-weight: 500;
+        }
+        #nav_name{
+            margin-left: 0px;
+        }
+        #nav_home{
+            margin-left: 140px;
+            padding-left: 100px;
+            color: rgba(255, 80, 30, 1);
+        }
+        #nav_home a{
+            /* margin-left: 140px;
+            padding-left: 100px; */
+            color: rgba(255, 80, 30, 1);
+        }
+        .nav_link{
+            margin-top: 25px;
+        }
+        .nav_icon{
+           margin: 25px 15px;
+           height: 20px;
+           width: 20px;
+        }
+        /* welcome */
+        #welcome{
+            /* position:absolute; */
+            display: flex;
+            /* margin-top: 100px; */
+            background-color: gray;
+            height: 850px;
+            font-family: sans-serif;
+            margin-bottom: 200px;
+        }
+        #wel_text{
+            padding-left: 150px;
+            padding-top: 250px;
+        }
+        #wel_img{
+            padding-left: 250px;
+            /* margin-top: 100px; */
+            /* padding-top: 150px; */
+        }
+        #wel_img img{
+            position: absolute;
+            /* padding-left: 250px; */
+            margin-top: 150px;
+            margin-left: -105px;
+         
+        }
+        #wel_text{
+            color: #fff;
+        }
+        #wel_text h1{
+            font-size: 60px;
+        }
+        #wel_text h3{
+            font-size: x-large;
+        }
+        #wel_text h4{
+            font-size: large;
+            margin-bottom: 50px;
+        }
+        #wel_text a{
+            /* background-color: orange; */
+            background-color: rgba(255, 80, 30, 1);
+            padding: 20px 40px;
+            border-radius: 30px;
+            color: white;
+            margin-top: 500px;
+        }
+
+        #wel_text a:hover{
+           
+            background-color: white;
+            color: rgba(255, 80, 30, 1);
+
+        }
+        /* services  */
+
+        #services{
+            display: flex;
+            margin: 10px 50px;
+            padding-bottom: 100px;
+        }
+        #services img{
+            margin: 0px 25px;
+
+        }
+        #services_text{
+          margin-left: 50px;
+          margin-top: 50px;
+          font-family: sans-serif;
+        }
+        #services_text h3{
+            /* color: rgba(255, 80, 30, 1); */
+            font-size: 20px;
+            letter-spacing: 3px;
+            font-weight: 500;
+            
+        }
+        #services_text h1{
+            color: rgba(255, 80, 30, 1);
+            font-size: 50px;
+            /* letter-spacing: 3px; */
+            font-weight: bolder;
+            
+        }
+        #services_text p{
+            /* color: rgba(255, 80, 30, 1); */
+            font-size: 20px;
+            width: 375px;
+            letter-spacing: 0.5px;
+            line-height: 40px;
+            margin-bottom: 40px;
+            
+        }
+        #services_text h4{
+            font-size: 25px;
+            font-weight: bolder;
+        }
+        #services_text h4 i{
+            padding-right: 20px;
+            color: rgba(255, 80, 30, 1);
+            /* margin-bottom: 20px; */
+        }
+        #services_text a{
+            background-color: rgba(255, 80, 30, 1);
+            padding: 20px 40px;
+            border-radius: 30px;
+            color: white;
+            /* margin-top: 100px; */
+            
+        }
+        #services_text a:hover{
+            background-color: wheat;
+            color: rgba(255, 80, 30, 1);
+        }
+        #serviceViewBtn{
+            /* margin-top: 10000px; */
+            position: absolute;
+            margin-top: 100px;
+        }
+
+        /* we Use */
+
+        #weUse{
+            /* width: 100%; */
+            /* *** property affecting next section i.. what customer say .. testimonial */
+            margin-bottom: 150px; 
+            /* padding-bottom: 200px; */
+        }
+        #weUseImg{
+            /* background: url("https://w0.peakpx.com/wallpaper/887/758/HD-wallpaper-royal-enfield-bullet-mountain-sky-sun-sunshine.jpg"); */
+          
+            /* background-image: url("https://pbs.twimg.com/media/DlNk5YUWwAAFDe5?format=jpg&name=900x900"); */
+
+            background-image: url("https://pbs.twimg.com/media/E-a7-8lVgAAKfit?format=jpg&name=large");
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* display: inline; */
+           height: 850px;
+           /* z-index: 0; */
+           /* margin-top: 200px; */
+           /* width: 100%; */
+        }
+        #weUseText{
+            /* margin-top: 200px; */
+            padding-top: 100px;
+            padding-left: 600px;
+            font-family: sans-serif;
+        }
+        #weUseText h3{
+            font-size: 20px;
+            letter-spacing: 3px;
+            font-weight: 500;
+        }
+        #weUseText h1{
+            color: rgba(255, 80, 30, 1);
+            font-size: 50px;
+            font-weight: bolder;
+            width: 600px;
+        }
+        #weUseText p{
+            font-size: 20px;
+            width: 375px;
+            letter-spacing: 0.5px;
+            line-height: 40px;
+            margin-bottom: 40px;
+            color: white;
+        }
+        #weUseLogos{
+            background-color: white;
+            display: flex;
+            position: relative;
+            padding: 0px 50px;
+            margin-left: 250px;
+            margin-top: -75px;
+            /* z-index: 1; */
+            width: fit-content;
+        }
+        #weUseLogos h2{
+            padding: 60px 50px;
+            border: 2px solid grey;
+            border-right: none;
+            color: gray;
+            margin-top: 2px;
+        }
+        #logo1{
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        #logo2{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #logo3{
+            font-family: "Jockey One", sans-serif;
+        }
+        #logo4{
+            font-family: "Kelly Slab", sans-serif;
+            border-right: 2px solid gray;
+            /* margin-left: 20px; */
+            /* border-radius: 30px; */
+        }
+
+        /* testimonial */
+        #say{
+            /* margin-top: 200px;
+            padding-top: 200px;
+            margin-left: 200px;
+            padding-left: 200px;
+            */
+            margin-left: 125px;
+            margin-bottom: 200px;
+            font-family: sans-serif;
+        } 
+        #say_heading{
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 100px;
+        }
+        #sayCards{
+            display: flex;
+            /* padding: 0 100px; */
+            /* padding-right: ; */
+        }
+        #sayCards div{
+            padding-right: 50px; 
+            margin-right: 50px;
+        }
+
+        #sayCards h3{
+            color: rgba(255, 80, 30, 1);
+        }
+
+        #sayCards i{
+           
+            font-size: 50px;
+            color: rgba(255, 80, 30, 1);
+        }
+        #sayCards p{
+            line-height: 30px;
+            font-size: 20px;
+            /* font-weight: 100; */
+            font-weight: lighter;
+            margin-bottom: 50px;
+        }
+
+        #sayCards h3{
+            font-size: 20px;
+        }
+
+        /* imgBeforeContact */
+
+        /* #imgBeforeContact{
+            /* background-image: url(); */
+            /* position: relative; */
+            /* position: static; */
+            /* position: sticky; */
+         /* }  */
+
+        /* contact Us */
+        #contactUs{
+            margin-top: 100px;
+            margin-left: 125px;
+            margin-bottom: 100px;
+            font-family: sans-serif;
+        }
+        #contactUs h1{
+            font-size: 45px;
+        }
+            #contactCards{
+                display: flex;
+                
+
+            }
+
+            #contactCards div{
+                padding: 80px 60px 80px 20px;
+                border: 2px solid gray;
+
+
+            }
+            #estimate{
+                background-color: rgba(255, 80, 30, 1);
+                color: white;
+            }
+            #estimate h4{
+                font-size: 25px;
+                margin-bottom: 50px;
+            }
+            #estimate a{
+            margin-top: 50px;
+            background-color: white;
+            padding: 20px 40px;
+            border-radius: 30px;
+            color: rgba(255, 80, 30, 1);
+            }
+
+
+            /* footer */
+            footer{
+                color: white;
+                background-color: black;
+            }
+        
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+
+        <ul>
+            <li id="nav_logo"><a href=""><img src="https://img.freepik.com/premium-vector/vector-motorcycle-sports-bike-logo-design_600323-955.jpg?w=826" alt="" id="logo_img"height="75px" width="75px"></a></li>
+            <li id="nav_text"> <h2>Oli's Hog Garage</h2> </li>
+            <li class="nav_link" id="nav_home"><a href="">Home</a></li>
+            <li class="nav_link"><a href="">About</a></li>
+            <li class="nav_link"> <a href="">Services</a></li>
+            <li class="nav_link"> <a href=""> Contact</a></li>
+            <li class="nav_icon"> <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+            <li class="nav_icon"><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <!-- welcome -->
+
+    <div id="welcome">
+        <div id="wel_text">
+            <h3>WELCOME TO</h3>
+           <h1>Oli's Hog Garage</h1>
+            <h4>Locally owned motorcycle service and repair</h4>
+           <a href=""id="booknow">Book Now</a>
+        </div>
+        <div id="wel_img">
+            <img src="https://static.wixstatic.com/media/74f558_8c6bc1843a3b42509396cb9df4c39e7bf000.jpg/v1/fill/w_539,h_674,al_r,q_85,usm_0.33_1.00_0.00,enc_auto/74f558_8c6bc1843a3b42509396cb9df4c39e7bf000.jpg" alt="" height="750px"
+            width ="600px"> 
+        </div>
+    </div>
+
+
+    <!-- services -->
+    <div id="services">
+        <img src="https://static.wixstatic.com/media/74f558_d961654181d1417f928263cde1349492~mv2_d_4000_6000_s_4_2.jpg/v1/fill/w_444,h_852,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/74f558_d961654181d1417f928263cde1349492~mv2_d_4000_6000_s_4_2.jpg" alt="" height="800px" width="400px">
+        <img src="https://static.wixstatic.com/media/74f558_ef6b63ff113a43c287bd5b1a15cfd3eb~mv2_d_6720_4480_s_4_2.jpg/v1/fill/w_452,h_852,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/74f558_ef6b63ff113a43c287bd5b1a15cfd3eb~mv2_d_6720_4480_s_4_2.jpg" alt="" height="800px" width="400px">
+        <div id="services_text">
+            <h3>CHECK OUT</h3>
+            <h1>Our Services</h1>
+             <p>I'm a paragraph. Click here to add your own text and edit me. It's easy.</p>
+             <h4><i class="fa-solid fa-oil-can"></i><b>Oil and filter change</b></h4>
+             <h4><i class="fa-solid fa-gear"></i><b>Tire mount and balance</b></h4>
+             <h4><i class="fa-solid fa-screwdriver-wrench"></i><b>Complete tune service</b></h4>
+            <a href=""id="serviceViewBtn">View All Services</a>
+        </div>
+    </div>
+
+    <div id="weUse">
+        <div id="weUseImg">
+
+            <div id="weUseText"> 
+                <h3>WE USE</h3>
+                <h1>High Quality Parts from the Best Brands</h1>
+                <p>I'm a paragraph. Click here to add your own text and edit me. It's easy.</p>
+            </div>
+       
+        </div>
+        <div id="weUseLogos">
+        <h2 id="logo1">Mony's Helmets</h2>
+        <h2 id="logo2">Fundop Tires</h2>
+        <h2 id="logo3">Chopper TZ</h2>
+        <h2 id="logo4">Hardwheel </h2>
+        </div>
+    </div>
+
+    <div id="say">
+        <div id="say_heading">
+            <h1>What Our Customers Say </h1>
+        </div>
+        
+        <div id="sayCards">
+
+            <div id="card1">
+                <i class="fa-solid fa-quote-left"></i>
+                <p>
+                    I'm a testimonial. Click to edit me and add text that says something nice about you and your services. Let your customers review you and tell their friends how great you are.”
+                </p>
+                <h3>Javier Perez</h3>
+            </div>
+            
+            <div id="card2">
+                <i class="fa-solid fa-quote-left"></i>
+                <p>
+                    I'm a testimonial. Click to edit me and add text that says something nice about you and your services. Let your customers review you and tell their friends how great you are.”
+                </p>
+                <h3>Lucy Fuller</h3>
+            </div>
+    
+            <div id="card3">
+                <i class="fa-solid fa-quote-left"></i>
+                <p>
+                    I'm a testimonial. Click to edit me and add text that says something nice about you and your services. Let your customers review you and tell their friends how great you are.”
+                </p>
+                <h3>TJ Green</h3>
+            </div>
+
+        </div>
+        
+    </div>
+
+
+
+    <div id="imgBeforeContact">
+        <img src="https://media.istockphoto.com/id/614415432/photo/this-bike-will-be-perfect.jpg?s=2048x2048&w=is&k=20&c=khYXDFWEdxn0I18YPDztEHyBHISHhaiEGywqLXzJI9o=" alt="" height="850px" width="100%">
+    </div>
+
+    <div id="contactUs">
+        <div id="contactHeading">
+            <h1>Contact Us</h1>
+        </div>
+
+
+        <div id="contactCards">
+
+            <div id="openingHours">
+                <h2> Opening Hours</h2>
+                <table>
+                    <tr>
+                        <td><b>Mon-Fri:</b></td>
+                        <td>9am - 6pm</td>
+                    </tr>
+                    <tr>
+                        <td><b>Sat:</b></td>
+                        <td>9am - 4pm</td>
+                    </tr>
+                    <tr>
+                        <td><b>Sun:</b></td>
+                        <td>Closed</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="info">
+                <h2>Info</h2>
+                <table>
+                    <tr>
+                        <td><b>Phone:</b></td>
+                        <td>123 - 456 - 7890</td>
+                     </tr>
+
+                    <tr>
+                        <td><b>Email:</b></td>
+                        <td>info@mysite.com</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="location">
+                <h2>Location</h2>
+                <p>500 Terry Francine Street
+                    <br>
+                    San Francisco, CA 94158
+                </p>
+            </div>
+
+            <div id="estimate">
+                <h4>
+                    Need an Estimate?</h4>
+                
+                    <a href="">Fill The Form</a>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <center><p> © 2024 by Paul</p></center>
+    </footer>
+    
+</body>
+
+</html>
